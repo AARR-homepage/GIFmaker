@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>AARR polygon shock gif generator</title>
+<script src="gif.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+    margin: 0; padding: 20px;
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+  }
+  label {
+    margin-top: 10px;
+  }
+  input, textarea {
+    width: 120%;
+    max-width: 800px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    border: 1px solid #ccc;
+    color: white;
+    outline: none;
+  }
+  textarea {
+    height: 100px;
+  }
+  button {
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #logbox {
+    width: 60%;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    font-family: "Consolas", monospace;
+  }
+  .log-error {
+    color: #ff6b6b;
+  }
+  .log-normal {
+    color: #ffffff;
+  }
+  footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h2>GIF生成ツール</h2>
+<form id="gifForm">
+  <label>1フレーム目画像をアップロード：</label>
+  <input type="file" id="upload" accept="image/*" required>
+
+  <label>中央に表示するメインテキスト (最大30文字)：</label>
+  <input type="text" id="mainText" maxlength="30" required>
+
+  <label>サブテキスト (最大30文字)：</label>
+  <input type="text" id="subText" maxlength="30">
+
+  <button type="submit">GIF生成</button>
+</form>
+
+<canvas id="canvas" style="display:none;"></canvas>
+<div id="logbox"></div>
+<div id="result"></div>
+
+<footer>is.gd/AARRDEV</footer>
+
+<script>
+
+
+  
+</script>
+
+</body>
+</html>
 
